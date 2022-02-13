@@ -1,0 +1,135 @@
+*{
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-image: url('../media/Bg-1.png'), linear-gradient(to right, #F9FEDC, #98CBC9);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-height: 100%;
+    gap: 25px 25px;
+    /* border: 1px solid red; */
+}
+
+nav{
+    grid-column: 1 / 13;
+    background-image: linear-gradient(to right, #F9FEDC, #98CBC9);
+    /* height: 25px; */
+    box-shadow: 0px 3px 5px #373b3b6e;
+    position: sticky;
+    top: 0px;
+    padding-top: 3px;
+}
+
+nav a{
+    text-decoration: none;
+    margin: 0 5px;
+    color: black;
+}
+
+nav a:hover{
+    /* background-color: black; */
+    /* color: white; */
+    text-decoration: underline;
+}
+
+header{
+    grid-column: 4 / 10;
+    background-image: linear-gradient(to right, #F9FEDC, #98CBC9);
+    padding: 15px;
+    border: 1px solid grey;
+}
+
+header img{
+    float: left;
+}
+
+main{
+    grid-column: 4 / 10;
+}
+
+main section{
+    background-image: linear-gradient(to right, #F9FEDC, #98CBC9);
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid grey;
+}
+
+ul{
+    list-style-type: none;
+}
+
+aside{
+    grid-column: 10 / 12;   
+    border: 1px solid grey;
+    background-image: linear-gradient(to right, #f9fedc96, #98cbc99f); 
+    max-height: 500px;
+    padding: 15px;
+}
+
+aside h3{
+    border-bottom: 1px solid grey;
+    margin-bottom: 25px;
+}
+
+aside h5{
+    margin-bottom: 2.5px;
+}
+
+aside div{
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgb(217, 232, 241);
+}
+
+footer{
+    grid-column: 1 / 13;
+    height: 70px;
+    border-top: 1px solid grey;
+    background-image: linear-gradient(to right, #F9FEDC, #98CBC9);
+}
+
+@media screen and (min-width: 801px) and (max-width: 1100px){
+    .container > *{
+        grid-column: 2 / 9;
+    }
+
+    .container nav{
+        grid-column: 1 / 13;
+    }
+
+    .container aside{
+        grid-column: 9 / 12;
+    }
+
+    .container footer{
+        grid-column: 1 / 13;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container header{
+        grid-column: 2 / 12;
+    }
+
+    .container main{
+        grid-column: 2 / 12;
+    }
+
+    .container aside{
+        grid-column: 2 / 12;
+    }
+
+}
+
